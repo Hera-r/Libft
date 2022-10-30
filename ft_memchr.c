@@ -22,10 +22,10 @@ void	*ft_memchr(const void *buffer, int c, size_t count)
 	while (new_b[i] && count--)
 	{
 		if (new_b[i] == c)
-			break ;
+			return (new_b + i);
 	i++;
 	}
-	return (new_b + i);
+	return (0);
 }
 
 /*
