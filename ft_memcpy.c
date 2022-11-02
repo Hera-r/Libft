@@ -16,12 +16,16 @@ void	*ft_memcpy(void *dest, const void *src, size_t count)
 {
 	int		i;
 	char	*new_dest;
+	char	*new_src;
 
 	i = 0;
 	new_dest = dest;
-	while (*(char *)src && count--)
+	new_src = (char *)src;
+	while (*new_src && count)
 	{
-		new_dest[i++] = *(char *)src++;
+		new_dest[i] = new_src[i];
+		i++;
+		count--;
 	}
 	new_dest[i] = '\0';
 	return (new_dest);
@@ -53,4 +57,5 @@ int main(void)
    
 
    return(0);
-}*/
+}
+*/
