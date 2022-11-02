@@ -19,11 +19,12 @@ void	*ft_memchr(const void *buffer, int c, size_t count)
 
 	i = 0;
 	new_b = (char *)buffer;
-	while (new_b[i] && count--)
+	while (new_b[i] && count)
 	{
 		if (new_b[i] == c)
 			return (new_b + i);
 	i++;
+	count--;
 	}
 	return (0);
 }
