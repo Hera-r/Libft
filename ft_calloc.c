@@ -14,5 +14,18 @@
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {
-	
+	char    *new_space;
+	int     i;
+
+	i = 0;
+	new_space = malloc(nmemb, size);
+	if (new_space == NULL)
+		return (NULL);
+	while (nmemb)
+	{
+		new_space[i] = 0;
+	i++;
+	nmemb--;
+	}
+	return (new_space);
 }
